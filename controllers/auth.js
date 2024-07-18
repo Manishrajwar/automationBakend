@@ -94,7 +94,7 @@ exports.start = async(req , res)=>{
   
     const browser = await puppeteer.launch({
       headless: false,
-      executablePath: '/path/to/Chrome',
+      // executablePath: '/path/to/Chrome',
             args: ["--disable-notifications", "--start-maximized" , "--no-sandbox", "--disable-setuid-sandbox"],
       defaultViewport: null,
       slowMo: true,
