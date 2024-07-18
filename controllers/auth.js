@@ -94,7 +94,8 @@ exports.start = async(req , res)=>{
   
     const browser = await puppeteer.launch({
       headless: false,
-      args: ["--disable-notifications", "--start-maximized"],
+      executablePath: '/usr/bin/google-chrome-stable',
+      args: ["--disable-notifications", "--start-maximized" , "--no-sandbox", "--disable-setuid-sandbox"],
       defaultViewport: null,
       slowMo: true,
     });
