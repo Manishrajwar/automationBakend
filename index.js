@@ -28,6 +28,6 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send("this is an get app");
+  res.send("this is an get app 2");
 });
 
