@@ -94,12 +94,12 @@ exports.start = async(req , res)=>{
   
     const browser = await puppeteer.launch({
       headless: false,
-      executablePath: "C:\Program Files\Google\Chrome\Application\126.0.6478.127",
-            args: ["--disable-notifications", "--start-maximized" , "--no-sandbox", "--disable-setuid-sandbox"],
+      executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\126.0.6478.127\\chrome.exe',
+      args: ["--disable-notifications", "--start-maximized" , "--no-sandbox", "--disable-setuid-sandbox"],
       defaultViewport: null,
       slowMo: true,
     });
-  
+    
     const page = await browser.newPage();
     await page.goto("https://internshala.com", { waitUntil: "networkidle2" });
   
