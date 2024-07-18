@@ -94,7 +94,7 @@ exports.start = async(req , res)=>{
   
     const browser = await puppeteer.launch({
       headless: false,
-      executablePath: '/usr/bin/google-chrome-stable',
+      // executablePath: '/usr/bin/google-chrome-stable',
       args: ["--disable-notifications", "--start-maximized" , "--no-sandbox", "--disable-setuid-sandbox"],
       defaultViewport: null,
       slowMo: true,
@@ -208,6 +208,8 @@ exports.start = async(req , res)=>{
   }
 
  await page.close();
+ 
+ return res.send('API endpoint hit successfully');
 
    } catch(error){
     console.log("error" ,error);
